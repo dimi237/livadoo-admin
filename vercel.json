@@ -1,0 +1,14 @@
+{
+  "env": {
+    "NEXT_PUBLIC_REST_API_ENDPOINT": "https://samara-api.appaa-cameroun.net",
+    "NEXT_PUBLIC_SHOP_URL": "https://samara-front-shop.vercel.app",
+    "NEXT_PUBLIC_GOOGLE_MAP_API_KEY": "Your Google Map Key"
+  },
+  "build": {
+    "env": {
+      "NEXT_PUBLIC_REST_API_ENDPOINT": "https://samara-api.appaa-cameroun.net",
+      "NEXT_PUBLIC_SHOP_URL": "https://samara-front-shop.vercel.app",
+      "NEXT_PUBLIC_GOOGLE_MAP_API_KEY": "Your Google Map Key"
+    }
+  }
+}
