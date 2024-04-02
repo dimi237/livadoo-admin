@@ -38,9 +38,9 @@ export default function LanguageSwitcher() {
           <Listbox.Button className="border border-solid border-[#CFD3DA] text-heading text-[13px] xl:text-sm font-semibold relative w-full py-2 ltr:pl-3 ltr:pr-7 rtl:pl-7 rtl:pr-3 bg-white rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-orange-300 focus-visible:ring-offset-2 focus-visible:border-indigo-500 cursor-pointer">
             <span className="flex truncate items-center">
               <span className="ltr:mr-3 ltr:ml-0 rtl:ml-3 rtl:mr-0">
-                {selectedItem.icon}
+                {selectedItem?.icon}
               </span>{' '}
-              {t(selectedItem.name)}
+              {t(selectedItem?.name)}
             </span>
             <span className="absolute inset-y-0 ltr:right-0 ltr:left-auto rtl:left-0 rtl:right-auto flex items-center ltr:pr-2 rtl:pl-2 pointer-events-none">
               <LangSwitcherIcon className="text-gray-400" aria-hidden="true" />

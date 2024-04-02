@@ -48,7 +48,7 @@ const Navbar = () => {
               {t('common:text-create-shop')}
             </LinkButton>
           )}
-          {enableMultiLang ? <LanguageSwitcher /> : null}
+          {/* {enableMultiLang ? <LanguageSwitcher /> : null} */}
           <AuthorizedMenu />
         </div>
       </nav>
