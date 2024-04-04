@@ -1,8 +1,8 @@
-import ConfirmationCard from "@components/common/confirmation-card";
+import ConfirmationCard from "../common/confirmation-card";
 import {
   useModalAction,
   useModalState,
-} from "@components/ui/modal/modal.context";
+} from "../ui/modal/modal.context";
 import { useDeleteTypeMutation } from "@data/type/use-type-delete.mutation";
 
 const TypeDeleteView = () => {
