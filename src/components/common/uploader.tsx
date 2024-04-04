@@ -32,7 +32,7 @@ export default function Uploader({
   const { getRootProps, getInputProps } = useDropzone({
     ...(!acceptFile ? { accept: 'image/*' } : { accept: ACCEPTED_FILE_TYPES }),
     multiple,
-    onDrop: async (acceptedFiles) => {
+    onDrop: async (acceptedFiles: any) => {
       if (acceptedFiles.length) {
         upload(
           acceptedFiles, // it will be an array of uploaded attachments
@@ -66,9 +66,9 @@ export default function Uploader({
       }
     },
 
-    onDropRejected: (fileRejections) => {
-      fileRejections.forEach((file) => {
-        file?.errors?.forEach((error) => {
+    onDropRejected: (fileRejections: any) => {
+      fileRejections.forEach((file: any) => {
+        file?.errors?.forEach((error: any) => {
           if (error?.code === 'file-too-large') {
             setError(t('error-file-too-large'));
           } else if (error?.code === 'file-invalid-type') {
@@ -118,9 +118,8 @@ export default function Uploader({
 
       return (
         <div
-          className={`relative mt-2 inline-flex flex-col overflow-hidden rounded me-2 ${
-            isImage ? 'border border-border-200' : ''
-          }`}
+          className={`relative mt-2 inline-flex flex-col overflow-hidden rounded me-2 ${isImage ? 'border border-border-200' : ''
+            }`}
           key={idx}
         >
           {/* {file?.thumbnail && isImage ? ( */}

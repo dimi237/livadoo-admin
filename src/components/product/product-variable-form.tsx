@@ -20,7 +20,7 @@ import { Config } from '@/config';
 type IProps = {
   initialValues?: Product | null;
   shopId: string | undefined;
-  settings: Settings | undefined;
+  settings: Settings | any;
 };
 
 export default function ProductVariableForm({

@@ -18,10 +18,10 @@ export function crudFactory<Type, QueryParams extends LanguageParam, InputType>(
     get({ slug, language }: GetParams) {
       return HttpClient.get<Type>(`${endpoint}/${slug}`, { language });
     },
-    create(data: InputType) {
+    create(data: InputType | any) {
       return HttpClient.post<Type>(endpoint, data);
     },
-    update({ id, ...input }: Partial<InputType> & { id: string }) {
+    update({ id, ...input }: Partial<InputType> | any & { id: string }) {
       return HttpClient.put<Type>(`${endpoint}/${id}`, input);
     },
     delete({ id }: { id: string }) {

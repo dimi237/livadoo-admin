@@ -114,7 +114,7 @@ const defaultValues = {
 };
 
 type IProps = {
-  initialValues?: Category | undefined;
+  initialValues?: Category | any;
 };
 export default function CreateOrUpdateCategoriesForm({
   initialValues,

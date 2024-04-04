@@ -73,12 +73,12 @@ type FormValues = {
   settings: TypeSettingsInput;
   images: [{
     key: {},
-    image: [Attachment]
+    image: [Attachment] | []
   }]
 };
 
 type IProps = {
-  initialValues?: Type | null;
+  initialValues?: any | null;
 };
 export default function CreateOrUpdateTypeForm({ initialValues }: IProps) {
   const router = useRouter();
@@ -182,11 +182,10 @@ export default function CreateOrUpdateTypeForm({ initialValues }: IProps) {
       <div className="flex flex-wrap my-5 sm:my-8">
         <Description
           title={t("form:item-description")}
-          details={`${
-            initialValues
+          details={`${initialValues
               ? t("form:item-description-update")
               : t("form:item-description-add")
-          } ${t("form:type-description-help-text")}`}
+            } ${t("form:type-description-help-text")}`}
           className="w-full px-0 sm:pe-4 md:pe-5 pb-5 sm:w-4/12 md:w-1/3 sm:py-8"
         />
 
@@ -236,11 +235,11 @@ export default function CreateOrUpdateTypeForm({ initialValues }: IProps) {
                       options={updateImages}
                       isClearable={false}
                     />
-                    <ValidationError message={t(errors.images?.[index]?.key?.message)}/>
+                    <ValidationError message={t(errors.images?.[index]?.key?.message)} />
 
                     <div>
-                      <FileInput name={`images.${index}.image` as const} control={control} multiple={true}/>
-                      <ValidationError message={t(errors.images?.[index]?.image?.message)}/>
+                      <FileInput name={`images.${index}.image` as const} control={control} multiple={true} />
+                      <ValidationError message={t(errors.images?.[index]?.image?.message)} />
                     </div>
                   </div>
 

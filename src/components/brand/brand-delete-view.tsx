@@ -3,7 +3,7 @@ import {
   useModalAction,
   useModalState,
 } from "../ui/modal/modal.context";
-import { useDeleteTypeMutation } from "@data/type/use-type-delete.mutation";
+import { useDeleteTypeMutation } from "../../data/type";
 
 const TypeDeleteView = () => {
   const { mutate: deleteType, isLoading: loading } = useDeleteTypeMutation();

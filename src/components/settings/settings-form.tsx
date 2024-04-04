@@ -369,7 +369,7 @@ export default function SettingsForm({
 
   const enableFreeShipping = watch('freeShipping');
   const currentCurrency = watch('currency');
-  const formation = watch('currencyOptions.formation');
+  const formation = watch('currencyOptions.formation') as any;
   const currentFractions = watch('currencyOptions.fractions') as number;
 
   const { fields, append, remove } = useFieldArray({

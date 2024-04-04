@@ -62,7 +62,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         disabled={disabled}
         {...rest}
       >
-        {children}
+        {children as any}
         {loading && (
           <span
             className={classes.loading}

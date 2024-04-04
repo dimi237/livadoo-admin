@@ -17,7 +17,7 @@ export const typeValidationSchema = yup.object().shape({
     .min(1, 'form:add-at-least-one-image')
     .of(
       yup.object().shape({
-        key: yup.object().notEmptyObject("form:text-select-layout"),
+        key: yup.object(),
         image: yup.array().min(1, "form:error-min-one-image")
       })
     )
