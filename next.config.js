@@ -13,6 +13,7 @@ module.exports = withPWA({
   images: {
     domains: [
       'samara-api.appaa-cameroun.net',
+      'api.livadoo.com',
       'via.placeholder.com',
       'res.cloudinary.com',
       's3.amazonaws.com',
