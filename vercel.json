@@ -1,23 +1,27 @@
 {
   "env": {
     "NEXT_PUBLIC_REST_API_ENDPOINT": "https://api.livadoo.com",
-    "NEXT_PUBLIC_SHOP_URL": "http://livadoo.com",
+    "NEXT_PUBLIC_SHOP_URL": "https://livadoo.com",
     "NEXT_PUBLIC_GOOGLE_MAP_API_KEY": "",
     "NEXT_PUBLIC_AUTH_TOKEN_KEY": "AUTH_CRED",
     "APPLICATION_MODE": "production",
     "NEXT_PUBLIC_DEFAULT_LANGUAGE": "fr",
-    "NEXT_PUBLIC_ENABLE_MULTI_LANG": "true",
+    "NEXT_PUBLIC_ENABLE_MULTI_LANG": "false",
+    "SECRET": "25be86d1051167ab674ff7d892c5b37c",
+    "REVALIDATE_DURATION": "120",
     "NEXT_PUBLIC_AVAILABLE_LANGUAGES": "fr,en"
   },
   "build": {
     "env": {
       "NEXT_PUBLIC_REST_API_ENDPOINT": "https://api.livadoo.com",
-      "NEXT_PUBLIC_SHOP_URL": "http://livadoo.com",
+      "NEXT_PUBLIC_SHOP_URL": "https://livadoo.com",
       "NEXT_PUBLIC_GOOGLE_MAP_API_KEY": "",
       "NEXT_PUBLIC_AUTH_TOKEN_KEY": "AUTH_CRED",
       "APPLICATION_MODE": "production",
-      "NEXT_PUBLIC_DEFAULT_LANGUAGE": "en",
-      "NEXT_PUBLIC_ENABLE_MULTI_LANG": "true",
+      "NEXT_PUBLIC_DEFAULT_LANGUAGE": "fr",
+      "NEXT_PUBLIC_ENABLE_MULTI_LANG": "false",
+      "SECRET": "25be86d1051167ab674ff7d892c5b37c",
+      "REVALIDATE_DURATION": "120",
       "NEXT_PUBLIC_AVAILABLE_LANGUAGES": "fr,en"
     }
   }

@@ -12,6 +12,8 @@ const Axios = axios.create({
   timeout: 50000,
   headers: {
     'Content-Type': 'application/json',
+    'Access-Control-Allow-Origin': '*',
+
   },
 });
 // Change request data/error
@@ -26,7 +28,7 @@ Axios.interceptors.request.use((config) => {
   config.headers = {
     ...config.headers,
     Authorization: `Bearer ${token}`,
-  };
+  } as any;
   return config;
 });
 
@@ -38,7 +40,7 @@ Axios.interceptors.response.use(
       (error.response && error.response.status === 401) ||
       (error.response && error.response.status === 403) ||
       (error.response &&
-        error.response.data.message === 'CHAWKBAZAR_ERROR.NOT_AUTHORIZED')
+        error.response.data.message === 'LIVADOO_ERROR.NOT_AUTHORIZED')
     ) {
       Cookies.remove(AUTH_TOKEN_KEY);
       Router.reload();

@@ -25,6 +25,8 @@ module.exports = withPWA({
       'pickbazarlaravel.s3.ap-southeast-1.amazonaws.com',
       'chawkbazarlaravel.s3.ap-southeast-1.amazonaws.com',
       'lh3.googleusercontent.com',
+      'livadoo.com',
+      'admin.livadoo.com',
     ],
   },
   ...(process.env.APPLICATION_MODE === 'production' && {
